@@ -1,0 +1,2 @@
+# Classical stack (default). For ANN training also install requirements-ann.txt
+-r requirements-classical.txt

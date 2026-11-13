@@ -1,0 +1,35 @@
+# Human-readable mirror of ampbench.data.catalog (code is source of truth).
+
+amplifiers:
+  - id: tga2595
+    name: TGA2595
+    manufacturer: Qorvo
+    raw_dir: data/raw/tga2595
+    canonical_file: vin_vout_fase.txt
+  - id: k_hpa10w_1721
+    name: K-HPA10W-1721-SSPA
+    manufacturer: ReliaSat
+    raw_dir: data/raw/k_hpa10w_1721
+    canonical_file: vin_vout_fase.txt
+  - id: q_hpa2w_3743
+    name: Q-HPA2W-3743
+    raw_dir: data/raw/q_hpa2w_3743
+    canonical_file: vin_vout_fase.txt
+  - id: hpa11201721qf
+    name: HPA11201721QF
+    raw_dir: data/raw/hpa11201721qf
+    canonical_file: vin_vout_fase.txt
+
+processed:
+  iq_qam256:
+    path: data/processed/iq_qam256/dataset.txt
+    columns: [time, I_in, Q_in, I_out, Q_out]
+    split_ratios: [0.70, 0.15, 0.15]
+    split_seed: 42
+    committed_splits: thesis_sequential  # do not overwrite casually
+
+pipeline:
+  - Digitized manufacturer curves → data/raw/<amp_id>/vin_vout_fase.txt
+  - (Thesis path) Simulink QAM-256 drive → data/processed/iq_qam256/dataset.txt
+  - Splits → train.txt / valid.txt / test.txt
+  - Models consume I/Q splits (Phase 3+)

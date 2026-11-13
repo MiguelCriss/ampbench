@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ampbench"
+version = "0.1.0"
+description = "Behavioral modeling toolkit for RF power amplifiers (ANN and memory-polynomial baselines)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Miguel Angel Chiri Yupanqui" }]
+keywords = ["RF", "power-amplifier", "behavioral-modeling", "MPM", "ANN", "5G"]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "tqdm>=4.66",
+]
+
+[project.urls]
+Homepage = "https://github.com/MiguelCriss/ampbench"
+Documentation = "https://github.com/MiguelCriss/ampbench#readme"
+Paper = "https://doi.org/10.52428/20758944.v20i55.1101"
+
+[project.optional-dependencies]
+ann = ["tensorflow>=2.13"]
+excel = ["openpyxl>=3.1"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+all = [
+  "tensorflow>=2.13",
+  "openpyxl>=3.1",
+  "pytest>=7.4",
+  "ruff>=0.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

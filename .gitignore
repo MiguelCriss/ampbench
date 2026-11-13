@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local-only proprietary / bulky sources (NOT for public GitHub)
+_local_only/
+
+# Generated artifacts (re-train / re-run to recreate)
+artifacts/**
+!artifacts/.gitkeep
+*.h5
+*.pkl
+*.mat
+*.npz
+*.npz.index
+*.ckpt
+
+# Large prediction / simulation dumps
+predicciones_*.txt
+**/sim_ann.txt
+PA_datos.csv
+amplifier_data.csv
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Misc
+*.log
+.tmp/

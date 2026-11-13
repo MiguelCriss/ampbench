@@ -1,0 +1,9 @@
+# Preliminary NMSE-like errors (dB) from early thesis runs on K-HPA10W.
+# Negative values follow the legacy "error" reporting convention in the notebooks.
+# Treat as historical notes, not as a formal benchmark table.
+
+model       error_vout_db           error_phase_db
+hammerstein -43.04618396558424      -30.198344109993176
+wiener      -39.73279889517278      -30.29235062205929
+mpm         -43.01637295065059      -25.8846157332858
+ann         -34.26851140397428      -28.788479655408278

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use ampbench, please cite the related article and this repository."
+title: "ampbench: behavioral modeling toolkit for RF power amplifiers"
+authors:
+  - family-names: "Chiri Yupanqui"
+    given-names: "Miguel Angel"
+license: MIT
+version: 0.1.0
+date-released: "2026-11-13"
+repository-code: "https://github.com/MiguelCriss/ampbench"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Chiri Yupanqui"
+      given-names: "Miguel Angel"
+  title: "Modeling the Behavior of a Power Amplifier for 5G Using Machine Learning"
+  journal: "Journal Boliviano de Ciencias"
+  year: 2024
+  volume: "20"
+  issue: "55"
+  pages: "6-14"
+  doi: "10.52428/20758944.v20i55.1101"
+  url: "https://revistas.univalle.edu/index.php/ciencias/article/view/1101"
